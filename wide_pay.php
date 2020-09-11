@@ -289,7 +289,7 @@ class Wide_Pay extends PaymentModule
                     array(
                         'type' => 'select',
                         'required' => true,
-                        'name' => 'WIDE_PAY_WAITING_PAYED',
+                        'name' => 'WIDE_PAY_PAYED',
 //                        'desc' => $this->l(''),
                         'label' => $this->l('Status Pago'),
                         'options' => array(

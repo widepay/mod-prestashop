@@ -123,6 +123,7 @@ class Wide_PayCobrancaModuleFrontController extends ModuleFrontController
             'pessoa' => $widepayPessoa,
             'cpf' => $widepayCpf,
             'cnpj' => $widepayCnpj,
+            'enviar'=> 'E-mail',
             'endereco' => array(
                 'rua' => $endereco->address1,
                 'complemento' => $endereco->address2,
