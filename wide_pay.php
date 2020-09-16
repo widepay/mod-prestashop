@@ -106,15 +106,20 @@ class Wide_Pay extends PaymentModule
         foreach (array_keys($form_values) as $key) {
             $value = Tools::getValue($key);
 
-            if ($key == 'WIDE_PAY_FINE' && ((float)$value > 20))
+            if ($key == 'WIDE_PAY_FINE' && ($this->stringToFloat($value) > 20))
                 array_push($errors, $this->l('Valor informado para multa está acima do permitido'));
 
-            if ($key == 'WIDE_PAY_INTEREST' && ((float)$value > 20))
+            if ($key == 'WIDE_PAY_INTEREST' && ($this->stringToFloat($value) > 20))
                 array_push($errors, $this->l('Valor informado para juros está acima do permitido'));
 
         }
 
         return count($errors) ? $errors : false;
+    }
+
+    private function stringToFloat($value)
+    {
+        return (float)str_replace(',', '.', $value);
     }
 
     protected function renderForm()
@@ -213,7 +218,7 @@ class Wide_Pay extends PaymentModule
                         'col' => 6,
                         'type' => 'text',
                         'required' => true,
-                        'desc' => $this->l('O campo acima "Tipo de Taxa de Variação" será aplicado de acordo com este campo. Será adicionado um novo item na cobrança do Wide Pay. Esse item será possível verificar apenas na tela de pagamento do Wide Pay. Utilize "." e não ","'),
+                        'desc' => $this->l('O campo acima "Tipo de Taxa de Variação" será aplicado de acordo com este campo. Será adicionado um novo item na cobrança do Wide Pay. Esse item será possível verificar apenas na tela de pagamento do Wide Pay.'),
                         'name' => 'WIDE_PAY_TAX_VARIATION',
                         'label' => $this->l('Taxa de Variação'),
                     ),
@@ -231,7 +236,7 @@ class Wide_Pay extends PaymentModule
                         'type' => 'text',
                         'required' => true,
                         'default' => 5,
-                        'desc' => $this->l('Configuração de multa após o vencimento, máximo 20, utilize "." e não ","'),
+                        'desc' => $this->l('Configuração de multa após o vencimento'),
                         'name' => 'WIDE_PAY_FINE',
                         'label' => $this->l('Configuração de Multa'),
                     ),
@@ -240,7 +245,7 @@ class Wide_Pay extends PaymentModule
                         'type' => 'text',
                         'required' => true,
                         'default' => 5,
-                        'desc' => $this->l('Configuração de juros após o vencimento, máximo 20, utilize "." e não ","'),
+                        'desc' => $this->l('Configuração de juros após o vencimento'),
                         'name' => 'WIDE_PAY_INTEREST',
                         'label' => $this->l('Configuração de Juros'),
                     ),
@@ -266,7 +271,7 @@ class Wide_Pay extends PaymentModule
                         'type' => 'select',
                         'required' => true,
                         'name' => 'WIDE_PAY_CPF_CNPJ',
-                        'desc' => $this->l('Campo customizado qual o CPF/CNPJ é salvo na loja!'),
+                        'desc' => $this->l('Campo customizado para CPF/CNPJ'),
                         'label' => $this->l('Origem CPF/CNPJ'),
                         'options' => array(
                             'query' => $extras,
@@ -337,7 +342,7 @@ class Wide_Pay extends PaymentModule
             $value = Tools::getValue($key);
 
             if (in_array($key, array('WIDE_PAY_TAX_VARIATION', 'WIDE_PAY_INTEREST', 'WIDE_PAY_FINE')))
-                $value = (float)$value;
+                $value = $this->stringToFloat($value);
 
 
             Configuration::updateValue($key, trim($value));
