@@ -27,11 +27,11 @@ A configuração do Plugin Wide Pay pode ser encontrada no menu: PrestaShop -> M
 |Token da Carteira Wide Pay|**Sim**|Preencha com o token referente a sua carteira escolhida no campo acima. Clique no botão: "Integrações" na página do Wide Pay, será exibido o Token|
 |Tipo da Taxa de Variação|Não|Modifique o valor final do recebimento. Configure aqui um desconto ou acrescimo na venda.|
 |Taxa de Variação|Não|O campo acima "Tipo de Taxa de Variação" será aplicado de acordo com este campo. Será adicionado um novo item na cobrança do Wide Pay. Esse item será possível verificar apenas na tela de pagamento do Wide Pay. Utilize "." e não ","|
-|Acréscimo de Dias no Vencimento|Não|Prazo de validade em dias para o Boleto.|
-|Configuração de Multa|Não|Configuração de multa após o vencimento, máximo 20, utilize "." e não ","|
-|Configuração de Juros|Não|Configuração de juros após o vencimento, máximo 20, utilize "." e não ","|
+|Acréscimo de Dias no Vencimento|Não|Número em dias para o vencimento do Boleto.|
+|Configuração de Multa|Não|Configuração de multa após o vencimento. Valor em porcentagem|
+|Configuração de Juros|Não|Configuração de juros após o vencimento. Valor em porcentagem|
 |Forma de Recebimento|Não|Selecione Boleto, Cartão|
 |Origem CPF/CNPJ|Não|Campo customizado para CPF/CNPJ|
-|Status Aguardando Pagamento|Não|#|
-|Status Pago|Não|#|
-|Status Não Pago|Não|#|
+|Status Aguardando Pagamento|Não|Status do sistema para aguardando pagamento|
+|Status Pago|Não|Status do sistema para fatura paga|
+|Status Não Pago|Não|Status do sistema para faturas não pagas|
