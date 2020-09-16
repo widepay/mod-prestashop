@@ -10,7 +10,7 @@ Módulo desenvolvido para integração entre o sistema PrestaShop e Wide Pay. Co
 # Instalação Plugin
 
 1. Para a instalação do plugin realize o download pelo link: https://github.com/widepay/mod-prestashop
-2. Após o download concluído, renomei o arquivo para: wide-pay.zip
+2. Após o download concluído, renomeie o arquivo para: wide-pay.zip
 3. Acesse o menu de módulos no PrestaShop, clique em "Enviar um módulo". Selecione o arquivo *wide-pay.zip*.
 4. Clique em Ativar.
 
