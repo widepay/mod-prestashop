@@ -30,7 +30,7 @@ A configuração do Plugin Wide Pay pode ser encontrada no menu: PrestaShop -> M
 |Acréscimo de Dias no Vencimento|Não|Número em dias para o vencimento do Boleto.|
 |Configuração de Multa|Não|Configuração de multa após o vencimento. Valor em porcentagem|
 |Configuração de Juros|Não|Configuração de juros após o vencimento. Valor em porcentagem|
-|Forma de Recebimento|Não|Selecione Boleto, Cartão|
+|Forma de Recebimento|Não|Selecione entre Boleto, Cartão|
 |Origem CPF/CNPJ|Não|Campo customizado para CPF/CNPJ|
 |Status Aguardando Pagamento|Não|Status do sistema para aguardando pagamento|
 |Status Pago|Não|Status do sistema para fatura paga|
