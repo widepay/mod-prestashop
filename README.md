@@ -26,7 +26,7 @@ A configuração do Plugin Wide Pay pode ser encontrada no menu: PrestaShop -> M
 |ID da Carteira Wide Pay |**Sim** |Preencha este campo com o ID da carteira que deseja receber os pagamentos do sistema. O ID de sua carteira estará presente neste link: https://www.widepay.com/conta/configuracoes/carteiras|
 |Token da Carteira Wide Pay|**Sim**|Preencha com o token referente a sua carteira escolhida no campo acima. Clique no botão: "Integrações" na página do Wide Pay, será exibido o Token|
 |Tipo da Taxa de Variação|Não|Modifique o valor final do recebimento. Configure aqui um desconto ou acrescimo na venda.|
-|Taxa de Variação|Não|O campo acima "Tipo de Taxa de Variação" será aplicado de acordo com este campo. Será adicionado um novo item na cobrança do Wide Pay. Esse item será possível verificar apenas na tela de pagamento do Wide Pay. Utilize "." e não ","|
+|Taxa de Variação|Não|O campo acima "Tipo de Taxa de Variação" será aplicado de acordo com este campo. Será adicionado um novo item na cobrança do Wide Pay. Esse item será possível verificar apenas na tela de pagamento do Wide Pay.|
 |Acréscimo de Dias no Vencimento|Não|Número em dias para o vencimento do Boleto.|
 |Configuração de Multa|Não|Configuração de multa após o vencimento. Valor em porcentagem|
 |Configuração de Juros|Não|Configuração de juros após o vencimento. Valor em porcentagem|
