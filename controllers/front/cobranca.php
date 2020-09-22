@@ -109,6 +109,7 @@ class Wide_PayCobrancaModuleFrontController extends ModuleFrontController
         $invoiceDuedate->modify('+' . intval(Configuration::get('WIDE_PAY_VALIDADE')) . ' day');
         $invoiceDuedate = $invoiceDuedate->format('Y-m-d');
         $tel = !empty($endereco->phone) ? $endereco->phone : $endereco->phone_mobile;
+        $tel = str_replace('+55', '' , $tel);
         $fiscal = preg_replace('/\D/', '', $this->cpf_cnpj());
         list($widepayCpf, $widepayCnpj, $widepayPessoa) = $this->getFiscal($fiscal);
 
